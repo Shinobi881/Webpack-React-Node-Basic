@@ -1,7 +1,7 @@
 module.exports = {
-  entry: './index.js', // relative path to the root JS file in our app
+  entry: './app/index.js', // relative path to the root JS file in our app
   output: {
-    filename: './bundle.js' // Where our transpiled code will end up (built by webpack)
+    filename: './dist/bundle.js' // Where our transpiled code will end up (built by webpack)
   },
   module: {
     loaders: [
