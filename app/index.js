@@ -8,5 +8,7 @@ export default class App extends Component {
     );
   }
 }
-
+if (typeof window !== 'undefined') {
+  
 render(<App />, document.getElementById('app'));
+}
