@@ -17,18 +17,22 @@ const Client = renderToString(compApp);
 
 app.use('/', express.static(publicPath)); // Use static middleware to resolve the dir where our index.html lives
 
-// const html = `
-// <!DOCTYPE html>
-// <html>
-// <head>
-//   <title>Bare Bones App</title>
-// </head>
-//   <body>
-//     <div id="app">${Client}</div>
-//     <script src=${bundle}></script>
-//   </body>
-// </html>
-// `
+const html = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bare Bones App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="http://localhost:3500/bundle.js"></script>
+  </body>
+</html>
+`;
+
+app.get('/', (req, res) => {
+  res.send(html);
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} from ${__dirname}`);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
+console.warn('This works');
+
 export default class App extends Component {
   render() {
     return (
@@ -9,6 +11,6 @@ export default class App extends Component {
   }
 }
 if (typeof window !== 'undefined') {
-  
-render(<App />, document.getElementById('app'));
+
+  render(<App />, document.getElementById('app'));
 }
