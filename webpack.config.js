@@ -5,7 +5,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ } // Transpile JS and React 
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }, // Transpile JS and React
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
     ]
   }
 };
